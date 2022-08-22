@@ -1,0 +1,18 @@
+[19-Aug-2022 11:58:06 Asia/Kolkata] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/file_no_wise.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/file_no_wise.php on line 61
+[19-Aug-2022 11:58:06 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, null given in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php:25
+Stack trace:
+#0 /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php(25): mysqli_fetch_assoc(NULL)
+#1 {main}
+  thrown in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php on line 25
+[19-Aug-2022 17:43:29 Asia/Kolkata] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/file_no_wise.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/file_no_wise.php on line 61
+[19-Aug-2022 17:43:29 Asia/Kolkata] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, null given in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php:25
+Stack trace:
+#0 /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php(25): mysqli_fetch_assoc(NULL)
+#1 {main}
+  thrown in /home/itourscloud/public_html/demo2/crm/view/dashboard/admin/package_tour/monthly_weekly_tours.php on line 25
