@@ -95,9 +95,9 @@ $date1 = str_replace('-', '/', $date);
 
                         <h2 class="ts-section-title" style="text-align:left;">WHO WE ARE</h2>
 
-                        <p class="ts-section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <p class="ts-section-description">Discovery is a great company to work with & we have been around for 20 years and more. There are a lot of firsts we have undertaken, bringing smiles and complete satisfaction in the faces of our clients, travellers and everybody who touches us.</p>
                         
-                        <p class="ts-section-description">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p class="ts-section-description">Our main focuses are - Individual travellers, Groups of companies (Meetings, Incentives, and Conferences), social (marriages, anniversaries, and birthdays) or just about any kind groups travelling and cruising. We take care of people anywhere and everywhere around the world.</p>
 
                     </div>
 
@@ -131,12 +131,12 @@ $date1 = str_replace('-', '/', $date);
 
     <div class="container">
 
-        <h2 class="ta-section-title">EXPERIENCED THE COLOURFUL WORLD!</h2><br>
-        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h6>
+        <h2 class="ta-section-title">EXPLORE THE BEAUTY OF NATURE</h2><br>
+        <h6>Find Best deals for Tour Packages, Hotels, Holidays, Bus Reservations for India & International travel, B2b Travel Services.</h6>
         
         <ul>
         <li style="padding-left: 40%;">
-                    <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">View More</a>
+                    <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">VIEW MORE</a>
                   </li>
         </ul>
 
@@ -635,7 +635,7 @@ if (sizeof($b2c_testmtest) != 0) {
 
                                         <h3 class="ts-testimonial-name"><?= $name ?></h3>
 
-                                        <p class="ts-testimonial-description"><?= substr($testm[$testm_count]->testm, 0, 400) . '[¡K]' ?></p>
+                                        <p class="ts-testimonial-description"><?= substr($testm[$testm_count]->testm, 0, 400) . '[ï¿½K]' ?></p>
 
                                         <a target='_blank' href="testimonials.php" class="ts-readmore-link">
 
@@ -792,7 +792,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     <div class="custom_texteditor">
 
-                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[¡K]' ?>
+                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[ï¿½K]' ?>
 
                                     </div>
                                     </p>
@@ -876,7 +876,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <a href="tel: <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
+                        <a <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
 
                     </li>
 

@@ -7,7 +7,7 @@ include "get_cache_currencies.php";
 include "array_column.php";
 
 // LIVE Cache file reading
-$file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
+/* $file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
 $cached_array = json_decode($file_get_c);
 
 function get_content($URL){
@@ -17,11 +17,11 @@ function get_content($URL){
   $data = curl_exec($ch);
   curl_close($ch);
   return $data;
-}
+} **/
 
 // LOCAL Cache file readingc
 
-// $cached_array = json_decode(file_get_contents('http://'.$_SERVER['SERVER_NAME'] . '/b2c-theme-1/crm/view/b2c_cache.php'));
+$cached_array = json_decode(file_get_contents('http://'.$_SERVER['SERVER_NAME'] . '/demo2/crm/view/b2c_cache.php'));
 
 
 
@@ -550,7 +550,7 @@ foreach ($int_dest_id_arr as $int_id) {
 
                   </li>
                   <li class="header-btn">
-                    <a class="btn header-offer-btn" href="<?= BASE_URL_B2C . 'offers.php' ?>">Offers</a>
+                    <a class="btn header-offer-btn" href="<?= BASE_URL_B2C . 'offers.php' ?>">OFFERS</a>
                   </li>
                 </ul>
 

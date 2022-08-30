@@ -18,7 +18,7 @@
 
               <?php if($cached_array[0]->company_profile_data[0]->contact_no!='') { ?><p> <span class="strong">Phone: </span> <span class="highlighted"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></span> </p> <?php } ?>
 
-              <?php if($cached_array[0]->company_profile_data[0]->email_id!='') { ?><p> <span class="strong">Email ID: </span> <span class="highlighted"><?= $cached_array[0]->company_profile_data[0]->email_id ?></span> </p><?php } ?>
+              <?php if($cached_array[0]->company_profile_data[0]->email_id!='') { ?><p> <span class="strong">Email ID: </span> <span class="highlighted" ><a href="mailto:<?= $cached_array[0]->company_profile_data[0]->email_id ?>" style="color: #838383;"><?= $cached_array[0]->company_profile_data[0]->email_id ?></span> </p><?php } ?>
 
           </div>
 
@@ -84,89 +84,96 @@
 
             <h2 class="c-heading">Important Links</h2>
 
-                <ul class="c-footerLink foot-links two-columns">
+            <ul class="c-footerLink foot-links two-columns">
 
-                    <div class="row"><div class="col-md-12">
+              <div class="row"><div class="col-md-12">
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+                <li> 
+                    <a target="_blank" href="<?=BASE_URL_B2C?>about.php" style="width: 100%;">About us</a> 
+                </li>
+              </div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>careers.php" style="width: 100%;">Career</a> </li>
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+                <li> 
+                  <a target="_blank" href="<?=BASE_URL_B2C?>careers.php" style="width: 100%;">Career</a> </li>
+              </div>
 
-                        </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+              </div></div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>blog.php" style="width: 100%;">Travel Blog</a> </li>
+              <div class="row"><div class="col-md-12">
 
-                        </div>
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
 
-                    </div></div>
+                <li> <a target="_blank" href="<?=BASE_URL_B2C?>award.php" style="width: 100%;">Awards</a> 
+                </li>
 
-                    <div class="row"><div class="col-md-12">
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>refund-policy.php" style="width: 100%;">Refund Policy</a> </li>
+                  <li> <a target="_blank" href="<?=BASE_URL_B2C?>gallery.php" style="width: 100%;">Gallery</a>  
+                  </li>
 
-                        </div>
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+              </div></div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>award.php" style="width: 100%;">Awards</a> </li>
+              <div class="row"><div class="col-md-12">
 
-                        </div>
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
 
-                    </div></div>
+                <li> <a target="_blank" href="<?=BASE_URL_B2C?>blog.php" style="width: 100%;">Travel Blog</a> 
+                </li>
 
-                    <div class="row"><div class="col-md-12">
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>privacy-policy.php" style="width: 100%;">Privacy Policy</a> </li>
+                  <li> <a target="_blank" href="<?=BASE_URL_B2C?>testimonials.php" style="width: 100%;">Testimonials</a> 
+                  </li>
 
-                        </div>
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+              </div></div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>terms-conditions.php" style="width: 100%;">Terms of Use</a> </li>
+              <div class="row"><div class="col-md-12">
 
-                        </div>
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
 
-                    </div></div>
+                <li> <a target="_blank" href="<?=BASE_URL_B2C?>refund-policy.php" style="width: 100%;">Refund Policy</a> 
+                </li>
 
-                    <div class="row"><div class="col-md-12">
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>testimonials.php" style="width: 100%;">Testimonials</a> </li>
+                <li> <a target="_blank" href="<?=BASE_URL_B2C?>privacy-policy.php" style="width: 100%;">Privacy Policy</a> 
+                </li>
 
-                        </div>
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+              </div></div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>gallery.php" style="width: 100%;">Gallery</a> </li>
+              <div class="row"><div class="col-md-12">
 
-                        </div>
+              <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
 
-                    </div></div>
+                <li> <a target="_blank" href="<?=BASE_URL_B2C?>terms-conditions.php" style="width: 100%;">Terms of Use</a> 
+                </li>
 
-                    <div class="row"><div class="col-md-12">
+              </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;">
+                  <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
 
-                          <li> <a target="_blank" href="<?=BASE_URL_B2C?>about.php" style="width: 100%;">About us</a> </li>
+                      <li> <a target="_blank" href="<?=BASE_URL_B2C?>cancellation-policy.php" style="width: 100%;">Cancellation Policy</a> </li>
 
-                        </div>
+                  </div>
 
-                        <div class="col-md-12 col-lg-6" style="padding: 0px!important;display: inline-block;">
+              </div></div>
 
-                            <li> <a target="_blank" href="<?=BASE_URL_B2C?>cancellation-policy.php" style="width: 100%;">Cancellation Policy</a> </li>
-
-                        </div>
-
-                    </div></div>
-
-                </ul>
+              </ul>
 
           </div>
 
@@ -218,7 +225,7 @@
 
       <div class="container">
 
-          <p class="ts-site-info-text">© 2021 <?= $cached_array[0]->company_profile_data[0]->company_name ?>. All Rights Reserved.</p>
+          <p class="ts-site-info-text">© 2022 <?= $cached_array[0]->company_profile_data[0]->company_name ?>. All Rights Reserved.</p>
 
       </div>
 
