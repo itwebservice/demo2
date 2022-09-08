@@ -962,6 +962,60 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </li>
 
+                        <?php }
+
+                        if ($social_media[0]->tw != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->tw ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-twitter"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li> 
+
+                        <?php }
+
+                        if ($social_media[0]->yu != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->yu ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-youtube"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li>
+                            
+                        <?php }
+
+                        if ($social_media[0]->li != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->li ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-linkedin"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li>
+
                     <?php } ?>
 
                 </ul>
