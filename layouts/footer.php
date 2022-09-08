@@ -225,7 +225,7 @@
 
       <div class="container">
 
-          <p class="ts-site-info-text">© 2022 <?= $cached_array[0]->company_profile_data[0]->company_name ?>. All Rights Reserved.</p>
+          <p class="ts-site-info-text">© 2022 <a href="#" style="text-decoration: none; color: inherit;"><?= $cached_array[0]->company_profile_data[0]->company_name?></a>. All Rights Reserved.</p>
 
       </div>
 
