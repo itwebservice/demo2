@@ -2589,7 +2589,7 @@ color: white !important;
 text-decoration: none;
 font-size: 14px;
 padding: 8px 15px;
-background-color: #2d3e52;
+background-color: <?= $btnColor ?>;
 }
 
 .foot-social ul {
