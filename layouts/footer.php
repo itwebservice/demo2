@@ -458,25 +458,6 @@
 
   <script type="text/javascript" src="<?php echo BASE_URL_B2C ?>js/scripts.js"></script>
 
-
-  <script>
-$(document).ready(function() {
-    $("#language").change(function() {
-        var value = $(this).val();
-        $('body').addClass(value);
-        if (value == "theme-light") {
-            $('body').removeClass('theme-dark');
-            $('body').addClass('theme-light');
-        } else if (value == "theme-dark") {
-            $('body').removeClass('theme-light');
-            $('body').addClass('theme-dark');
-        } else {
-            $('body').removeClass('theme-light');
-            $('body').removeClass('theme-dark');
-        }
-    });
-});
-  </script>
   </body>
 
   </html>
