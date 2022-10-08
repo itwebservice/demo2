@@ -41,7 +41,7 @@ zoom: 1;
 position: fixed;
 width: 100%;
 height: 100vh;
-background: #fff url("https://i.imgur.com/dIamRtt.gif") no-repeat center
+background: #fff url("https://itourscloud.com/demo1/images/flight_loader.gif") no-repeat center
 center;
 z-index: 999;
 }
@@ -180,7 +180,7 @@ position: absolute;
 right: 0;
 top: 0;
 content: "";
-background: var(--secondary-color);
+background: <?= $btnColor ?>;
 width: 24px;
 height: 100%;
 }
@@ -834,7 +834,7 @@ width: 30px;
 height: 33px;
 text-align: center;
 line-height: 34px;
-background: var(--secondary-color);
+background: <?= $btnColor?>;
 }
 
 .datepicker-wrap.yellow:after {
@@ -1423,6 +1423,7 @@ color: <?= $btnColor ?>;
 }
 
 .ts-blog-time svg {
+color: <?= $btnColor ?>;
 width: 15px;
 margin-right: 5px;
 padding-bottom: 2px;

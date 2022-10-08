@@ -307,6 +307,12 @@ color: #69a1d4;
 /* ----------------------------------------------
 Component :: Buttons
 ------------------------------------------------- */
+enq-btn{
+border: 2px solid <?= $btnColor ?>;
+background-color: #fff;
+
+}
+
 .c-button,
 .c-buttonBorder {
 border: 0;
@@ -4913,9 +4919,9 @@ border-radius: 3px 0 0 3px;
 border-radius: 0 3px 3px 0;
 }
 .radioCheck .sect .radio_lbl {
-color: #999;
+color: #fff;
 cursor: pointer;
-background-color: #eee;
+background-color: <?= $btnColor ?>;
 display: block;
 padding: 12px 25px 9px;
 font-size: 14px;
