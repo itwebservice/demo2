@@ -1898,7 +1898,7 @@ flex-wrap: wrap;
 }
 
 .ts-social-media-item {
-margin-right: 30px;
+margin-right: 20px;
 }
 
 /***************** Sticky social media *******************/
@@ -1942,6 +1942,42 @@ background: #0e76a8;
 background: #ff0000;
 }
 /***************** End Sticky social media *******************/
+
+/***************** Partner slider *******************/
+.logo-slider img{
+width: 100%;
+}
+
+.logo-slider .item{
+background-color: #fff;
+box-shadow: 0 4px 5px #cacaca;
+border-radius: 8px;
+padding: 15px;
+border: 2px solid #111;
+}
+.logo-slider .slick-slide{
+margin:15px;
+
+}
+.slick-dots li.slick-active button:before{
+color:#ff5722;
+}
+.slick-dots li button:before{
+font-size: 12px;
+}
+.slick-next:before,
+.slick-prev:before{
+color: #ff8159;
+font-size: 24px;
+}
+.item:hover{
+display: block;
+transition: all ease 0.3s;
+transform: scale(1.1) translateY(-5px);
+}
+
+/***************** End Partner slider *******************/
+
 
 /***************** Home Page End *******************/
 

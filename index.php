@@ -619,6 +619,26 @@ if (sizeof($group_tour_data) != 0) { ?>
 
 <!-- Rate Section End -->
 
+!-- Partner Slider Start -->
+<div class="container mt-5 mb-5 pt-5 pb-5">
+    <h1 class="text-center mt-5 mb-5">Our Partners
+
+        <?php
+        $logos = json_decode($cached_array[0]->cms_data[0]->assoc_logos);
+        ?>
+    </h1>
+    <div class="logo-slider">
+        <?php foreach ($logos as $logo) { ?>
+        <div class="item"><a href="#"><img
+                    src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200"
+                    alt=""></a>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+<!-- Partner Slider End -->
+
+
 <?php
 
 $b2c_testm = ($cached_array[0]->cms_data[4] != '') ? $cached_array[0]->cms_data[4] : [];
@@ -1242,6 +1262,37 @@ include 'layouts/footer.php';
 <script type="text/javascript" src="view/group_tours/js/index.js"></script>
 
 <script type="text/javascript" src="js/scripts.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<!--partner slider script-->
+<script>
+$('.logo-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    autoplay: true,
+    autoplayspeed: 2000,
+    infinite: true,
+    responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
+</script>
+<!--End partner slider script-->
 
 <script>
 $(document).ready(function() {
