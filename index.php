@@ -45,11 +45,11 @@ $date1 = str_replace('-', '/', $date);
 
         ?>
 
-        <div class="item">
+            <div class="item">
 
-            <img src="<?php echo $download_url ?>" alt="<?= $app_name ?>" style="border: none;" />
+                <img src="<?php echo $download_url ?>" alt="<?= $app_name ?>" style="border: none;" />
 
-        </div>
+            </div>
 
         <?php } ?>
 
@@ -68,47 +68,47 @@ $date1 = str_replace('-', '/', $date);
     <ul>
         <?php
 
-            if ($social_media[0]->fb != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->fb ?>">
-            <li class="fb">
-                <i class="fa fa-facebook"></i>
-            </li>
-        </a>
+        if ($social_media[0]->fb != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->fb ?>">
+                <li class="fb">
+                    <i class="fa fa-facebook"></i>
+                </li>
+            </a>
         <?php }
         if ($social_media[0]->tw != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->tw ?>">
-            <li class="twit">
-                <i class="fa fa-twitter"></i>
-            </li>
-        </a>
+            <a target="_blank" href="<?= $social_media[0]->tw ?>">
+                <li class="twit">
+                    <i class="fa fa-twitter"></i>
+                </li>
+            </a>
         <?php }
         if ($social_media[0]->wa != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->wa ?>">
-            <li class="wapp">
-                <i class="fa fa-whatsapp"></i>
-            </li>
-        </a>
+            <a target="_blank" href="<?= $social_media[0]->wa ?>">
+                <li class="wapp">
+                    <i class="fa fa-whatsapp"></i>
+                </li>
+            </a>
         <?php }
         if ($social_media[0]->inst != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->inst ?>">
-            <li class="insta">
-                <i class="fa fa-instagram"></i>
-            </li>
-        </a>
+            <a target="_blank" href="<?= $social_media[0]->inst ?>">
+                <li class="insta">
+                    <i class="fa fa-instagram"></i>
+                </li>
+            </a>
         <?php }
         if ($social_media[0]->li != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->li ?>">
-            <li class="link">
-                <i class="fa fa-linkedin"></i>
-            </li>
-        </a>
+            <a target="_blank" href="<?= $social_media[0]->li ?>">
+                <li class="link">
+                    <i class="fa fa-linkedin"></i>
+                </li>
+            </a>
         <?php }
         if ($social_media[0]->yu != '') { ?>
-        <a target="_blank" href="<?= $social_media[0]->yu ?>">
-            <li class="yt">
-                <i class="fa fa-youtube"></i>
-            </li>
-        </a>
+            <a target="_blank" href="<?= $social_media[0]->yu ?>">
+                <li class="yt">
+                    <i class="fa fa-youtube"></i>
+                </li>
+            </a>
         <?php } ?>
     </ul>
 </div>
@@ -133,8 +133,7 @@ $date1 = str_replace('-', '/', $date);
 
                             <h2 class="ts-section-subtitle">KNOW MORE</h2>
 
-                            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler"
-                                    classimg-fluid></span>
+                            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
 
                         </div>
 
@@ -206,28 +205,28 @@ $package_tours = (($cached_array[0]->package_tour_data) != '') ? $cached_array[0
 
 if (sizeof($package_tour_data) != 0) { ?>
 
-<!-- Destinations Section Start -->
+    <!-- Destinations Section Start -->
 
-<section class="ts-destinations-section">
+    <section class="ts-destinations-section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="ts-section-subtitle-content">
+            <div class="ts-section-subtitle-content">
 
-            <h2 class="ts-section-subtitle">PACK AND GO</h2>
+                <h2 class="ts-section-subtitle">PACK AND GO</h2>
 
-            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
+                <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
 
-        </div>
+            </div>
 
-        <h2 class="ts-section-title">DREAM DESTINATIONS FOR HOLIDAY</h2>
+            <h2 class="ts-section-title">DREAM DESTINATIONS FOR HOLIDAY</h2>
 
 
-        <div class="ts-blog-content dream-destinations">
+            <div class="ts-blog-content dream-destinations">
 
-            <div class="row">
+                <div class="row">
 
-                <?php
+                    <?php
 
                     for ($i = 0; $i < sizeof($package_tour_data); $i++) {
 
@@ -288,67 +287,63 @@ if (sizeof($package_tour_data) != 0) { ?>
 
                     ?>
 
-                <div class="col col-12 col-md-6 col-lg-4">
+                        <div class="col col-12 col-md-6 col-lg-4">
 
-                    <div class="ts-blog-card">
+                            <div class="ts-blog-card">
 
-                        <div class="ts-blog-card-img">
+                                <div class="ts-blog-card-img">
 
-                            <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
+                                    <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path
-                                        d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z"
-                                        fill="#ffffff" />
-                                </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z" fill="#ffffff" />
+                                        </svg>
 
-                            </a>
+                                    </a>
 
-                            <img src="<?= $newUrl1 ?>" alt="Package Image" class="img-fluid ">
+                                    <img src="<?= $newUrl1 ?>" alt="Package Image" class="img-fluid ">
+
+                                </div>
+
+                                <div class="ts-blog-card-body">
+
+                                    <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $package_name1 ?></a>
+
+                                    <p class="ts-blog-time">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#808080" />
+                                        </svg>
+
+                                        <span><?= $total_nights ?> Nights, <?= $total_days ?> Days</span>
+
+                                    </p>
+
+                                    <p class="ts-blog-card-description"><?= $note ?> </p>
+
+                                </div>
+
+                                <div class="ts-blog-card-footer">
+
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> VIEW MORE</a>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
-                        <div class="ts-blog-card-body">
-
-                            <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $package_name1 ?></a>
-
-                            <p class="ts-blog-time">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path
-                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
-                                        fill="#808080" />
-                                </svg>
-
-                                <span><?= $total_nights ?> Nights, <?= $total_days ?> Days</span>
-
-                            </p>
-
-                            <p class="ts-blog-card-description"><?= $note ?> </p>
-
-                        </div>
-
-                        <div class="ts-blog-card-footer">
-
-                            <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> VIEW MORE</a>
-
-                        </div>
-
-                    </div>
+                    <?php } ?>
 
                 </div>
-
-                <?php } ?>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- Destinations Section End -->
+    <!-- Destinations Section End -->
 
 <?php } ?>
 
@@ -360,29 +355,29 @@ $group_tours = (($cached_array[0]->group_tour_data) != '') ? $cached_array[0]->g
 
 if (sizeof($group_tour_data) != 0) { ?>
 
-<!-- Destinations Section Start -->
+    <!-- Destinations Section Start -->
 
-<section class="ts-destinations-section">
+    <section class="ts-destinations-section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="ts-section-subtitle-content">
+            <div class="ts-section-subtitle-content">
 
-            <h2 class="ts-section-subtitle">PACK AND GO</h2>
+                <h2 class="ts-section-subtitle">PACK AND GO</h2>
 
-            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
+                <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
 
-        </div>
+            </div>
 
-        <h2 class="ts-section-title">DREAM DESTINATIONS FOR GROUP TOUR</h2>
+            <h2 class="ts-section-title">DREAM DESTINATIONS FOR GROUP TOUR</h2>
 
 
 
-        <div class="ts-blog-content dream-destinations">
+            <div class="ts-blog-content dream-destinations">
 
-            <div class="row">
+                <div class="row">
 
-                <?php
+                    <?php
 
                     $today_date = strtotime(date('Y-m-d'));
 
@@ -472,46 +467,42 @@ if (sizeof($group_tour_data) != 0) { ?>
 
                     ?>
 
-                <div class="col col-12 col-md-6 col-lg-4">
+                        <div class="col col-12 col-md-6 col-lg-4">
 
-                    <div class="ts-blog-card">
+                            <div class="ts-blog-card">
 
-                        <div class="ts-blog-card-img">
+                                <div class="ts-blog-card-img">
 
-                            <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
+                                    <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path
-                                        d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z"
-                                        fill="#ffffff" />
-                                </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z" fill="#ffffff" />
+                                        </svg>
 
-                            </a>
+                                    </a>
 
-                            <img src="<?= $newUrl1 ?>" alt="Package Image" class="img-fluid">
+                                    <img src="<?= $newUrl1 ?>" alt="Package Image" class="img-fluid">
 
-                        </div>
+                                </div>
 
-                        <div class="ts-blog-card-body">
+                                <div class="ts-blog-card-body">
 
-                            <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $tour_name1 ?></a>
+                                    <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $tour_name1 ?></a>
 
-                            <p class="ts-blog-time">
+                                    <p class="ts-blog-time">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path
-                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
-                                        fill="#808080" />
-                                </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#808080" />
+                                        </svg>
 
-                                <span><?= $tour_groups_array[0]->days - 1 ?> Nights, <?= $tour_groups_array[0]->days ?>
-                                    Days</span>
+                                        <span><?= $tour_groups_array[0]->days - 1 ?> Nights, <?= $tour_groups_array[0]->days ?>
+                                            Days</span>
 
-                            </p>
+                                    </p>
 
-                            <p class="ts-blog-card-description ts-blog-card-description-date">
+                                    <p class="ts-blog-card-description ts-blog-card-description-date">
 
-                                <?php
+                                        <?php
 
                                         for ($v = 0; $v < sizeof($valid_dates_array); $v++) {
 
@@ -520,31 +511,31 @@ if (sizeof($group_tour_data) != 0) { ?>
 
                                         ?>
 
-                            </p>
+                                    </p>
+
+                                </div>
+
+                                <div class="ts-blog-card-footer">
+
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> READ MORE</a>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
-                        <div class="ts-blog-card-footer">
-
-                            <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> READ MORE</a>
-
-                        </div>
-
-                    </div>
+                    <?php } ?>
 
                 </div>
-
-                <?php } ?>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- Destinations Section End -->
+    <!-- Destinations Section End -->
 
 <?php } ?>
 
@@ -619,7 +610,7 @@ if (sizeof($group_tour_data) != 0) { ?>
 
 <!-- Rate Section End -->
 
-!-- Partner Slider Start -->
+<!-- Partner Slider Start -->
 <div class="container mt-5 mb-5 pt-5 pb-5">
     <h1 class="text-center mt-5 mb-5">Our Partners
 
@@ -629,10 +620,8 @@ if (sizeof($group_tour_data) != 0) { ?>
     </h1>
     <div class="logo-slider">
         <?php foreach ($logos as $logo) { ?>
-        <div class="item"><a href="#"><img
-                    src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200"
-                    alt=""></a>
-        </div>
+            <div class="item"><a href="#"><img src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200" alt=""></a>
+            </div>
         <?php } ?>
     </div>
 </div>
@@ -649,27 +638,27 @@ if (sizeof($b2c_testmtest) != 0) {
 
 ?>
 
-<!-- Testimonial Section Start -->
+    <!-- Testimonial Section Start -->
 
-<section class="ts-testimonial-section">
+    <section class="ts-testimonial-section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="ts-section-subtitle-content">
+            <div class="ts-section-subtitle-content">
 
-            <h2 class="ts-section-subtitle">RELAX AND ENJOY</h2>
+                <h2 class="ts-section-subtitle">RELAX AND ENJOY</h2>
 
-            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
+                <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
 
-        </div>
+            </div>
 
-        <h2 class="ts-section-title">HAPPY CUSTOMERS</h2>
+            <h2 class="ts-section-title">HAPPY CUSTOMERS</h2>
 
-        <div class="ts-testimonial-slider owl-carousel">
+            <div class="ts-testimonial-slider owl-carousel">
 
-            <!-- Item Start -->
+                <!-- Item Start -->
 
-            <?php
+                <?php
 
                 $testm = $b2c_testmtest;
 
@@ -697,66 +686,64 @@ if (sizeof($b2c_testmtest) != 0) {
 
                 ?>
 
-            <div class="item">
+                        <div class="item">
 
-                <div class="row justify-content-center">
+                            <div class="row justify-content-center">
 
-                    <div class="col col-12 col-md-6 col-lg-5">
+                                <div class="col col-12 col-md-6 col-lg-5">
 
-                        <div class="ts-testimonial-img">
+                                    <div class="ts-testimonial-img">
 
-                            <img src="<?= $newUrl1 ?>" alt="Customer Image" class="img-fluid">
+                                        <img src="<?= $newUrl1 ?>" alt="Customer Image" class="img-fluid">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col col-12 col-md-6 col-lg-5">
+
+                                    <div class="ts-testimonial-content">
+
+                                        <h3 class="ts-testimonial-name"><?= $name ?></h3>
+
+                                        <p class="ts-testimonial-description">
+                                            <?= substr($testm[$testm_count]->testm, 0, 400) . '[�K]' ?></p>
+
+                                        <a target='_blank' href="testimonials.php" class="ts-readmore-link">
+
+                                            <span>Read More</span>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                                                <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                                                <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#808080" />
+                                            </svg>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
-                    </div>
-
-                    <div class="col col-12 col-md-6 col-lg-5">
-
-                        <div class="ts-testimonial-content">
-
-                            <h3 class="ts-testimonial-name"><?= $name ?></h3>
-
-                            <p class="ts-testimonial-description">
-                                <?= substr($testm[$testm_count]->testm, 0, 400) . '[�K]' ?></p>
-
-                            <a target='_blank' href="testimonials.php" class="ts-readmore-link">
-
-                                <span>Read More</span>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-                                    <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                                    <path
-                                        d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
-                                        fill="#808080" />
-                                </svg>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <?php
+                <?php
 
                     }
                 }
 
                 ?>
 
-            <!-- Item End -->
+                <!-- Item End -->
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- Testimonial Section End -->
+    <!-- Testimonial Section End -->
 
 <?php } ?>
 
@@ -770,25 +757,25 @@ $b2c_blog = ($b2c_blogs->b2c_blogs != '') ? $b2c_blogs->b2c_blogs : [];
 
 if (sizeof($b2c_blog) != 0) { ?>
 
-<!-- Updates blog Section Start -->
+    <!-- Updates blog Section Start -->
 
-<section class="ts-update-section">
+    <section class="ts-update-section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="ts-section-subtitle-content">
+            <div class="ts-section-subtitle-content">
 
-            <h2 class="ts-section-subtitle">EXPLORATIONAL STORIES </h2>
+                <h2 class="ts-section-subtitle">EXPLORATIONAL STORIES </h2>
 
-            <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
+                <span class="ts-section-subtitle-icon"><img src="images/traveler.png" alt="traveler" classimg-fluid></span>
 
-        </div>
+            </div>
 
-        <h2 class="ts-section-title">BLOG AND UPDATES</h2>
+            <h2 class="ts-section-title">BLOG AND UPDATES</h2>
 
-        <div class="ts-testimonial-slider owl-carousel">
+            <div class="ts-testimonial-slider owl-carousel">
 
-            <?php
+                <?php
 
                 foreach ($b2c_blogs as $blog) {
 
@@ -819,26 +806,25 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                 ?>
 
-            <div class="row justify-content-center">
+                        <div class="row justify-content-center">
 
-                <div class="col col-12 col-md-6 col-lg-5">
+                            <div class="col col-12 col-md-6 col-lg-5">
 
-                    <div class="ts-update-img">
+                                <div class="ts-update-img">
 
-                        <img src="<?= $newUrl1 ?>" alt="Blog Image" class="img-fluid">
+                                    <img src="<?= $newUrl1 ?>" alt="Blog Image" class="img-fluid">
 
-                    </div>
+                                </div>
 
-                </div>
+                            </div>
 
-                <div class="col col-12 col-md-6 col-lg-5">
+                            <div class="col col-12 col-md-6 col-lg-5">
 
-                    <div class="ts-update-content">
+                                <div class="ts-update-content">
 
-                        <a href="single-blog.php?blog_id=<?= $blog[$blog_count]->entry_id ?>" target="_blank"
-                            class="ts-update-title"><?= $blog[$blog_count]->title ?></a>
+                                    <a href="single-blog.php?blog_id=<?= $blog[$blog_count]->entry_id ?>" target="_blank" class="ts-update-title"><?= $blog[$blog_count]->title ?></a>
 
-                        <!-- <ul class="ts-update-info-list">
+                                    <!-- <ul class="ts-update-info-list">
 
                                         <li class="ts-update-info-item">
 
@@ -874,50 +860,47 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     </ul> -->
 
-                        <p class="ts-updates-description">
+                                    <p class="ts-updates-description">
 
-                        <div class="custom_texteditor">
+                                    <div class="custom_texteditor">
 
-                            <?= substr($blog[$blog_count]->description, 0, 500) . '[�K]' ?>
+                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[�K]' ?>
+
+                                    </div>
+                                    </p>
+
+                                    <a href="single-blog.php?blog_id=<?= $blog[$blog_count]->entry_id ?>" target="_blank" class="ts-readmore-link">
+
+                                        <span>Read More</span>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                                            <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#808080" />
+                                        </svg>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
 
                         </div>
-                        </p>
 
-                        <a href="single-blog.php?blog_id=<?= $blog[$blog_count]->entry_id ?>" target="_blank"
-                            class="ts-readmore-link">
-
-                            <span>Read More</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-                                <path
-                                    d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
-                                    fill="#808080" />
-                            </svg>
-
-                        </a>
-
-                    </div>
-
-                </div>
+                <?php }
+                } ?>
 
             </div>
 
-            <?php }
-                } ?>
+            <div class="text-center">
+
+                <a href="blog.php" target="_blank" class="btn btn-primary">Read more blogs</a>
+
+            </div>
 
         </div>
 
-        <div class="text-center">
+    </section>
 
-            <a href="blog.php" target="_blank" class="btn btn-primary">Read more blogs</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Updates Section End -->
+    <!-- Updates Section End -->
 
 <?php } ?>
 
@@ -966,8 +949,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <a <?= $cached_array[0]->company_profile_data[0]->contact_no ?>"
-                            class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
+                        <a <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
 
                     </li>
 
@@ -979,8 +961,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <a href="mailto:<?= $cached_array[0]->company_profile_data[0]->email_id ?>"
-                            class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->email_id ?></a>
+                        <a href="mailto:<?= $cached_array[0]->company_profile_data[0]->email_id ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->email_id ?></a>
 
                     </li>
 
@@ -1005,109 +986,109 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                     if ($social_media[0]->fb != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->fb ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->fb ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
+                        </li>
 
                     <?php }
 
                     if ($social_media[0]->inst != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->inst ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->inst ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-instagram"></i>
+                                    <i class="fa fa-instagram"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
+                        </li>
 
                     <?php }
 
                     if ($social_media[0]->wa != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->wa ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->wa ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-whatsapp"></i>
+                                    <i class="fa fa-whatsapp"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
-
-                    <?php }
-
-                        if ($social_media[0]->tw != '') { ?>
-
-                    <li class="ts-social-media-item">
-
-                        <a target="_blank" href="<?= $social_media[0]->tw ?>" class="ts-social-media-link">
-
-                            <span class="ts-contact-info-icon">
-
-                                <i class="fa fa-twitter"></i>
-
-                            </span>
-
-                        </a>
-
-                    </li>
+                        </li>
 
                     <?php }
 
-                        if ($social_media[0]->yu != '') { ?>
+                    if ($social_media[0]->tw != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->yu ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->tw ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-youtube"></i>
+                                    <i class="fa fa-twitter"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
+                        </li>
 
                     <?php }
 
-                        if ($social_media[0]->li != '') { ?>
+                    if ($social_media[0]->yu != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->li ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->yu ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-youtube"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
+                        </li>
+
+                    <?php }
+
+                    if ($social_media[0]->li != '') { ?>
+
+                        <li class="ts-social-media-item">
+
+                            <a target="_blank" href="<?= $social_media[0]->li ?>" class="ts-social-media-link">
+
+                                <span class="ts-contact-info-icon">
+
+                                    <i class="fa fa-linkedin"></i>
+
+                                </span>
+
+                            </a>
+
+                        </li>
 
                     <?php } ?>
 
@@ -1127,8 +1108,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                 <label for="inputName">Name *</label>
 
-                                <input type="text" class="form-control" id="inputName" name="inputName"
-                                    placeholder="Name" onkeypress="return blockSpecialChar(event)" required>
+                                <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Name" onkeypress="return blockSpecialChar(event)" required>
 
                             </div>
 
@@ -1136,8 +1116,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                 <label for="inputEmail">Email *</label>
 
-                                <input type="email" class="form-control" id="inputEmail1" name="inputEmail1"
-                                    placeholder="Email" required>
+                                <input type="email" class="form-control" id="inputEmail1" name="inputEmail1" placeholder="Email" required>
 
                             </div>
 
@@ -1145,8 +1124,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                 <label for="inputPhone">Phone *</label>
 
-                                <input type="number" class="form-control" id="inputPhone" name="inputPhone"
-                                    placeholder="Phone" required>
+                                <input type="number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Phone" required>
 
                             </div>
 
@@ -1184,8 +1162,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                             <label for="InputMessage">Message*</label>
 
-                            <textarea id="inputMessage" name="inputMessage" rows="8" class="form-control"
-                                placeholder="Message" required></textarea>
+                            <textarea id="inputMessage" name="inputMessage" rows="8" class="form-control" placeholder="Message" required></textarea>
 
                         </div>
 
@@ -1208,41 +1185,41 @@ if (sizeof($b2c_blog) != 0) { ?>
 <a href="#" class="scrollup">Scroll</a>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
 
-(function() {
+    (function() {
 
-    'use strict';
+        'use strict';
 
-    window.addEventListener('load', function() {
+        window.addEventListener('load', function() {
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
 
-        var forms = document.getElementsByClassName('needs-validation');
+            var forms = document.getElementsByClassName('needs-validation');
 
-        // Loop over them and prevent submission
+            // Loop over them and prevent submission
 
-        var validation = Array.prototype.filter.call(forms, function(form) {
+            var validation = Array.prototype.filter.call(forms, function(form) {
 
-            form.addEventListener('submit', function(event) {
+                form.addEventListener('submit', function(event) {
 
-                if (form.checkValidity() === false) {
+                    if (form.checkValidity() === false) {
 
-                    event.preventDefault();
+                        event.preventDefault();
 
-                    event.stopPropagation();
+                        event.stopPropagation();
 
-                }
+                    }
 
-                form.classList.add('was-validated');
+                    form.classList.add('was-validated');
 
-            }, false);
+                }, false);
 
-        });
+            });
 
-    }, false);
+        }, false);
 
-})();
+    })();
 </script>
 
 <?php
@@ -1267,104 +1244,104 @@ include 'layouts/footer.php';
 
 <!--partner slider script-->
 <script>
-$('.logo-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    autoplay: true,
-    autoplayspeed: 2000,
-    infinite: true,
-    responsive: [{
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+    $('.logo-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplayspeed: 2000,
+        infinite: true,
+        responsive: [{
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
+        ]
+    });
 </script>
 <!--End partner slider script-->
 
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
 
-    /////// Next 10th day onwards date display
+        /////// Next 10th day onwards date display
 
-    var tomorrow = new Date();
+        var tomorrow = new Date();
 
-    tomorrow.setDate(tomorrow.getDate() + 10);
+        tomorrow.setDate(tomorrow.getDate() + 10);
 
-    var day = tomorrow.getDate();
+        var day = tomorrow.getDate();
 
-    var month = tomorrow.getMonth() + 1
+        var month = tomorrow.getMonth() + 1
 
-    var year = tomorrow.getFullYear();
+        var year = tomorrow.getFullYear();
 
-    $('#travelDate').datetimepicker({
-        timepicker: false,
-        format: 'm/d/Y',
-        minDate: tomorrow
-    });
-
-
-
-    $('#checkInDate, #checkOutDate, #checkDate').datetimepicker({
-        timepicker: false,
-        format: 'm/d/Y',
-        minDate: new Date()
-    });
-
-    $('#pickup_date').datetimepicker({
-        format: 'm/d/Y H:i',
-        minDate: new Date()
-    });
-
-    document.getElementById('return_date').readOnly = true;
-
-
-
-    var service = '<?php echo $service; ?>';
-
-    if (service && (service !== '' || service !== undefined)) {
-
-        var checkLink = $('.c-searchContainer .c-search-tabs li');
-
-        var checkTab = $('.c-searchContainer .search-tab-content .tab-pane');
-
-        checkLink.each(function() {
-
-            var child = $(this).children('.nav-link');
-
-            if (child.data('service') === service) {
-
-                $(this).siblings().children('.nav-link').removeClass('active');
-
-                child.addClass('active');
-
-            }
-
+        $('#travelDate').datetimepicker({
+            timepicker: false,
+            format: 'm/d/Y',
+            minDate: tomorrow
         });
 
-        checkTab.each(function() {
 
-            if ($(this).data('service') === service) {
 
-                $(this).addClass('active show').siblings().removeClass('active show');
+        $('#checkInDate, #checkOutDate, #checkDate').datetimepicker({
+            timepicker: false,
+            format: 'm/d/Y',
+            minDate: new Date()
+        });
 
-            }
+        $('#pickup_date').datetimepicker({
+            format: 'm/d/Y H:i',
+            minDate: new Date()
+        });
 
-        })
+        document.getElementById('return_date').readOnly = true;
 
-    }
 
-});
+
+        var service = '<?php echo $service; ?>';
+
+        if (service && (service !== '' || service !== undefined)) {
+
+            var checkLink = $('.c-searchContainer .c-search-tabs li');
+
+            var checkTab = $('.c-searchContainer .search-tab-content .tab-pane');
+
+            checkLink.each(function() {
+
+                var child = $(this).children('.nav-link');
+
+                if (child.data('service') === service) {
+
+                    $(this).siblings().children('.nav-link').removeClass('active');
+
+                    child.addClass('active');
+
+                }
+
+            });
+
+            checkTab.each(function() {
+
+                if ($(this).data('service') === service) {
+
+                    $(this).addClass('active show').siblings().removeClass('active show');
+
+                }
+
+            })
+
+        }
+
+    });
 </script>
