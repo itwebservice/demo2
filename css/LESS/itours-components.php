@@ -7,20 +7,6 @@ font-family: 'Saira Condensed', sans-serif;
 font-family: 'Lato', sans-serif;
 */
 
-<?php
-include '../../crm/model/model.php';
-$data = mysqli_fetch_array(mysqlQuery('SELECT * FROM `b2c_color_scheme`'));
-if (!empty($data)) {
-  $btnColor = $data['button_color'];
-  $primaryColor = $data['text_primary_color'];
-} else {
-  $btnColor = '#ff5300';
-  $primaryColor = '#f68c34';
-}
-?>
-
-
-
 @import "./_library.less";
 
 
@@ -166,7 +152,7 @@ text-transform: uppercase;
 display: block;
 width: 42px;
 float: left;
-background: <?= $primaryColor ?>;
+background: var(--main-primary-color);
 line-height: 42px;
 color: @white;
 font-size: 2em;
@@ -305,7 +291,7 @@ color: #69a1d4;
 Component :: Buttons
 ------------------------------------------------- */
 enq-btn{
-border: 2px solid <?= $btnColor ?>;
+border: 2px solid var(--main-bg-color);
 background-color: #fff;
 
 }
@@ -397,7 +383,7 @@ background-color: #333333;
 .c-tag {
 display: inline-block;
 padding: 2px 10px;
-background: <?= $primaryColor ?>;
+background: var(--main-primary-color);
 font-size: 11px;
 color: @white;
 border-radius: 30px;
@@ -540,7 +526,7 @@ top: 2px;
 left: 0;
 height: 15px;
 width: 15px;
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 font-size: 13px;
 line-height: 13px;
 }
@@ -613,7 +599,7 @@ text-decoration: none;
 letter-spacing: 0.4px;
 }
 .c-breadcrumbs ul li.st-active a {
-color: <?= $primaryColor ?>
+color: var(--main-primary-color)
 }
 /* ----------------------------------------------
 Component :: Containers
@@ -673,7 +659,7 @@ display: block;
 z-index: 100;
 }
 .c-pageHeaderTop .pageHeader_top {
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 padding: 2px 0;
 display: block;
 height: auto;
@@ -1683,7 +1669,7 @@ bottom: 10px;
 right: 10px;
 display: inline-block;
 font-size: 11px;
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 line-height: 11px;
 letter-spacing: 0.5px;
 text-transform: uppercase;
@@ -1695,7 +1681,7 @@ z-index: 3;
 box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 .c-cardListTable .cardList-image .hotelType .icon {
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 display: inline-block;
 font-size: 11px;
 line-height: 11px;
@@ -1781,7 +1767,7 @@ line-height: 14px;
 
 .cardList-info .cardInfoLine:not(.cust)::before,
 .cartInfo .cardInfoLine:not(.cust)::before {
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 font-size: 12px;
 line-height: 16px;
 position: absolute;
@@ -2528,7 +2514,7 @@ position: relative;
 top: 2px;
 }
 .for-transfer .sortIcon::before {
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 font-family: "itours";
 content: "\75";
 display: block;
@@ -2624,7 +2610,7 @@ margin: 0 2px 0 0;
 .c-compTabs .nav-tabs .nav-item .nav-link {
 border: 0;
 border-bottom: 1px solid transparent;
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 display: block;
 color: @white;
 font-size: 14px;
@@ -3316,7 +3302,7 @@ color: #838383;
 .select2-container--default
 .select2-selection--single
 .select2-selection__arrow {
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 width: 24px;
 height: 32px;
 }
@@ -3514,7 +3500,7 @@ margin-bottom: 10px;
 }
 .c-modifyFilter .c-accordion .card,
 .c-modifyFilter .c-accordion .card .btn-link {
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 color: @white;
 position: relative;
 }
@@ -4573,7 +4559,7 @@ line-height: 32px;
 }
 
 .infoSection .cardInfoLine.cust .icon {
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 font-size: 12px;
 line-height: 16px;
 position: absolute;
@@ -4926,7 +4912,7 @@ border-radius: 0 3px 3px 0;
 .radioCheck .sect .radio_lbl {
 color: #fff;
 cursor: pointer;
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 display: block;
 padding: 12px 25px 9px;
 font-size: 14px;

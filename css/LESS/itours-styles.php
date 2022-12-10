@@ -7,17 +7,6 @@
 $primaryColor
 */
 
-<?php
-include '../../crm/model/model.php';
-$data = mysqli_fetch_array(mysqlQuery('SELECT * FROM `b2c_color_scheme`'));
-if (!empty($data)) {
-  $btnColor = $data['button_color'];
-  $primaryColor = $data['text_primary_color'];
-} else {
-  $btnColor = '#ff5300';
-  $primaryColor = '#f68c34';
-}
-?>
 
 @import "./_library.less";
 
@@ -177,7 +166,7 @@ position: absolute;
 right: 0;
 top: 0;
 content: "";
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 width: 24px;
 height: 100%;
 }
@@ -831,7 +820,7 @@ width: 30px;
 height: 33px;
 text-align: center;
 line-height: 34px;
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 }
 
 .datepicker-wrap.yellow:after {
@@ -1265,7 +1254,7 @@ margin-left: 65px;
 content: "";
 width: 55px;
 height: 2px;
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 display: inline-block;
 position: absolute;
 right: 100%;
@@ -1301,7 +1290,7 @@ padding: 0 15px;
 }
 
 .ts-vision-icon__inner {
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 width: 60px;
 height: 60px;
 border-radius: 50%;
@@ -1394,7 +1383,7 @@ font-weight: 500;
 }
 
 .ts-blog-card-title:hover {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 }
 
 .ts-blog-time {
@@ -1416,11 +1405,11 @@ color: #666666;
 }
 
 .ts-blog-time a:hover {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 }
 
 .ts-blog-time svg {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 width: 15px;
 margin-right: 5px;
 padding-bottom: 2px;
@@ -1446,7 +1435,7 @@ line-height: 26px;
 text-align: center;
 display: block;
 padding: 11px 30px;
-border-top: 1px solid <?= $btnColor ?>;
+border-top: 1px solid var(--main-bg-color);
 color: #666666;
 text-transform: uppercase;
 -webkit-transition: all ease-in-out 0.3s;
@@ -1456,7 +1445,7 @@ transition: all ease-in-out 0.3s;
 
 .ts-blog-card-link,
 .ts-blog-card-link:hover {
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 color: #ffffff;
 text-decoration: none;
 }
@@ -1474,7 +1463,7 @@ align-items: center;
 -webkit-box-pack: center;
 -ms-flex-pack: center;
 justify-content: center;
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 opacity: 0;
 -webkit-transition: all ease-in-out 0.3s;
 -o-transition: all ease-in-out 0.3s;
@@ -1535,7 +1524,7 @@ padding: 0 15px;
 }
 
 .ts-available-rate-icon {
-background: <?= $primaryColor ?>;
+background: var(--main-primary-color);
 color: #ffffff;
 width: 100px;
 height: 100px;
@@ -1585,7 +1574,7 @@ color: #444444;
 font-size: 24px;
 margin-bottom: 20px;
 padding-bottom: 20px;
-border-bottom: 1px solid <?= $primaryColor ?>;
+border-bottom: 1px solid var(--main-primary-color);
 position: relative;
 }
 
@@ -1595,7 +1584,7 @@ position: absolute;
 top: calc(100% - 1.5px);
 width: 205px;
 height: 3px;
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 border-radius: 3px;
 }
 
@@ -1605,7 +1594,7 @@ color: #666666;
 }
 
 .ts-readmore-link {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 font-size: 14px;
 display: -webkit-box;
 display: -ms-flexbox;
@@ -1684,7 +1673,7 @@ transition: all ease-in-out 0.3s;
 }
 
 .ts-update-title:hover {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 text-decoration: none;
 }
 
@@ -1714,7 +1703,7 @@ color: #666666;
 }
 
 .ts-update-info-text:hover {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 }
 
 .ts-updates-description {
@@ -1739,7 +1728,7 @@ transition: all ease-in-out 0.3s;
 }
 
 .btn-primary {
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 color: #ffffff;
 }
 
@@ -1783,7 +1772,7 @@ background-position: center;
 
 .ts-contact-info-icon {
 background: #ffffff;
-color: <?= $primaryColor ?>;
+color: var(--main-primary-color);
 width: 50px;
 height: 50px;
 border-radius: 50%;
@@ -2010,7 +1999,7 @@ height: 100%;
 }
 
 .ts-reason-icon__inner {
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 width: 60px;
 height: 60px;
 border-radius: 50%;
@@ -2135,7 +2124,7 @@ align-items: center;
 }
 
 .ts-rating-item {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 margin-right: 5px;
 }
 
@@ -2305,12 +2294,12 @@ justify-content: center;
 }
 
 .ts-pagination .page-link {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 }
 
 .ts-pagination .page-item.active .page-link {
-background-color: <?= $btnColor ?>;
-border-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
+border-color: var(--main-bg-color);
 }
 
 .scrollup {
@@ -2359,7 +2348,7 @@ align-items: center;
 }
 
 .ts-best-place-section .ts-blog-time i {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 }
 
 .ts-best-place-img {
@@ -2368,7 +2357,7 @@ margin-bottom: 20px;
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 }
 
 .nav-pills .nav-link {
@@ -2446,7 +2435,7 @@ transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .ts-tab-content__inner .btn[aria-expanded="true"] .ts-accordian-icon {
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 }
 
 .ts-tab-content__inner .btn[aria-expanded="true"] .ts-accordian-icon:before {
@@ -2476,7 +2465,7 @@ margin-right: 10px;
 }
 
 .ts-tours-night-name-item {
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 }
 
 .ts-best-place-landing-section > img {
@@ -2538,7 +2527,7 @@ display: block;
 }
 
 .ts-best-place-price-body {
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 padding: 25px 10px;
 color: #ffffff;
 text-align: center;
@@ -2623,7 +2612,7 @@ color: white !important;
 text-decoration: none;
 font-size: 14px;
 padding: 8px 15px;
-background-color: <?= $btnColor ?>;
+background-color: var(--main-bg-color);
 }
 
 .foot-social ul {
@@ -2660,7 +2649,7 @@ color: #fff;
 }
 
 .ts-page-breadcrum a {
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 padding: 0 5px;
 }
 
@@ -2695,7 +2684,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 width: 50px;
 height: 50px;
 margin: auto;
-background-color: <?= $primaryColor ?>;
+background-color: var(--main-primary-color);
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -2802,10 +2791,10 @@ linear,
 left top,
 right top,
 from(#fbdb24),
-to(<?= $btnColor ?>)
+to(var(--main-bg-color))
 );
-background: -o-linear-gradient(left, #fbdb24, <?= $btnColor ?>);
-background: <?= $btnColor ?>;
+background: -o-linear-gradient(left, #fbdb24, var(--main-bg-color));
+background: var(--main-bg-color);
 font-size: 15px;
 font-weight: 500;
 text-transform: capitalize;
@@ -2824,10 +2813,10 @@ linear,
 left top,
 right top,
 from(#fbdb24),
-to(<?= $btnColor ?>)
+to(var(--main-bg-color))
 );
 background: -o-linear-gradient(left, #fbdb24, #ff5300);
-background: <?= $btnColor ?>;
+background: var(--main-bg-color);
 font-size: 15px;
 font-weight: 500;
 text-transform: capitalize;
@@ -3418,13 +3407,13 @@ text-align: right;
 .div-upload {
 padding: 4px 13px 4px 17px;
 background: #fff;
-color: <?= $btnColor ?>;
+color: var(--main-bg-color);
 display: inline-block;
 position: relative;
 font-size: 12px;
 line-height: 24px;
 border-radius: 25px;
-border: 1px solid <?= $btnColor ?>;
+border: 1px solid var(--main-bg-color);
 cursor: pointer;
 -webkit-box-shadow: none;
 box-shadow: none;

@@ -7,21 +7,22 @@ include "get_cache_currencies.php";
 include "array_column.php";
 
 // LIVE Cache file reading
-/*$file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
+$file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
 $cached_array = json_decode($file_get_c);
 
-function get_content($URL){
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_URL, $URL);
-  $data = curl_exec($ch);
-  curl_close($ch);
-  return $data;
-}*/
+function get_content($URL)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $URL);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
+}
 
 // LOCAL Cache file readingc
 
-$cached_array = json_decode(file_get_contents('http://' . $_SERVER['SERVER_NAME'] . '/demo2/crm/view/b2c_cache.php'));
+//$cached_array = json_decode(file_get_contents('http://' . $_SERVER['SERVER_NAME'] . '/demo2/crm/view/b2c_cache.php'));
 
 
 
@@ -230,8 +231,24 @@ foreach ($int_dest_id_arr as $int_id) {
 
     <!-- COMMON CSS -->
 
-    <link id="main-style" rel="stylesheet/less" type="text/css"
-        href="<?php echo BASE_URL_B2C; ?>css/LESS/itours-styles.php" />
+    <?php
+    $colorData = $cached_array[0]->cms_data[1];
+    if (!empty($colorData->text_primary_color) && !empty($colorData->button_color)) {
+        $btnColor = $colorData->button_color;
+        $primaryColor = $colorData->text_primary_color;
+    } else {
+        $btnColor = '#93d42e';
+        $primaryColor = '#f68c34';
+    }
+    ?>
+    <Style>
+        * {
+            --main-bg-color: <?= $btnColor ?>;
+            --main-primary-color: <?= $primaryColor ?>;
+        }
+    </Style>
+
+    <link id="main-style" rel="stylesheet/less" type="text/css" href="<?php echo BASE_URL_B2C; ?>css/LESS/itours-styles.php" />
 
     <script src="<?php echo BASE_URL_B2C; ?>js/less.js"></script>
 
@@ -240,7 +257,7 @@ foreach ($int_dest_id_arr as $int_id) {
 
 
     <script>
-    <?= $google_analytics ?>
+        <?= $google_analytics ?>
     </script>
 
     <script src="<?= $tidio_chat ?>" async></script>
@@ -290,8 +307,7 @@ foreach ($int_dest_id_arr as $int_id) {
                                 <span class="staticText d-inline"><span style="text-transform: capitalize;"> Helpline
                                         :</span> <?= $cached_array[0]->company_profile_data[0]->contact_no ?></span>
 
-                                <a href="mailto:<?= $cached_array[0]->company_profile_data[0]->email_id ?>"
-                                    class="header-mail-link d-inline ml-2"><?= $cached_array[0]->company_profile_data[0]->email_id ?></a>
+                                <a href="mailto:<?= $cached_array[0]->company_profile_data[0]->email_id ?>" class="header-mail-link d-inline ml-2"><?= $cached_array[0]->company_profile_data[0]->email_id ?></a>
                             </div>
 
                             <div class="col-md-5 col-12 section-3">
@@ -302,8 +318,7 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                         <li>
 
-                                            <a class="login_button" target="_blank"
-                                                href="<?= BASE_URL . 'view/customer/index.php' ?>">Login</a>
+                                            <a class="login_button" target="_blank" href="<?= BASE_URL . 'view/customer/index.php' ?>">Login</a>
 
                                         </li>
 
@@ -406,15 +421,13 @@ foreach ($int_dest_id_arr as $int_id) {
 
                         <nav class="col-sm-9 col-5 text-right pad-top">
 
-                            <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close"
-                                href="javascript:void(0);"><span>Menu mobile</span></a>
+                            <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
 
                             <div class="main-menu">
 
                                 <div id="header_menu">
 
-                                    <img src="<?php echo $admin_logo_url; ?>" width="160" height="34"
-                                        alt="<?php echo $app_name; ?>" />
+                                    <img src="<?php echo $admin_logo_url; ?>" width="160" height="34" alt="<?php echo $app_name; ?>" />
 
                                 </div>
 
@@ -446,9 +459,8 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                                     for ($i = 0; $i < sizeof($group_dom_array); $i++) { ?>
 
-                                                    <li><a
-                                                            onclick="get_tours_data('<?= $group_dom_array[$i]->dest_id ?>','2')"><?= $group_dom_array[$i]->dest_name ?></a>
-                                                    </li>
+                                                        <li><a onclick="get_tours_data('<?= $group_dom_array[$i]->dest_id ?>','2')"><?= $group_dom_array[$i]->dest_name ?></a>
+                                                        </li>
 
                                                     <?php } ?>
 
@@ -464,9 +476,8 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                                     for ($i = 0; $i < sizeof($group_intn_array); $i++) { ?>
 
-                                                    <li><a
-                                                            onclick="get_tours_data('<?= $group_intn_array[$i]->dest_id ?>','2')"><?= $group_intn_array[$i]->dest_name ?></a>
-                                                    </li>
+                                                        <li><a onclick="get_tours_data('<?= $group_intn_array[$i]->dest_id ?>','2')"><?= $group_intn_array[$i]->dest_name ?></a>
+                                                        </li>
 
                                                     <?php } ?>
 
@@ -494,9 +505,8 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                                     for ($i = 0; $i < sizeof($dom_array); $i++) { ?>
 
-                                                    <li><a
-                                                            onclick="get_tours_data('<?= $dom_array[$i]->dest_id ?>','1')"><?= $dom_array[$i]->dest_name ?></a>
-                                                    </li>
+                                                        <li><a onclick="get_tours_data('<?= $dom_array[$i]->dest_id ?>','1')"><?= $dom_array[$i]->dest_name ?></a>
+                                                        </li>
 
                                                     <?php } ?>
 
@@ -512,9 +522,8 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                                     for ($i = 0; $i < sizeof($intn_array); $i++) { ?>
 
-                                                    <li><a
-                                                            onclick="get_tours_data('<?= $intn_array[$i]->dest_id ?>','1')"><?= $intn_array[$i]->dest_name ?></a>
-                                                    </li>
+                                                        <li><a onclick="get_tours_data('<?= $intn_array[$i]->dest_id ?>','1')"><?= $intn_array[$i]->dest_name ?></a>
+                                                        </li>
 
                                                     <?php } ?>
 
@@ -568,8 +577,7 @@ foreach ($int_dest_id_arr as $int_id) {
 
                                     </li>
                                     <li class="header-btn">
-                                        <a class="btn header-offer-btn"
-                                            href="<?= BASE_URL_B2C . 'offers.php' ?>">OFFERS</a>
+                                        <a class="btn header-offer-btn" href="<?= BASE_URL_B2C . 'offers.php' ?>">OFFERS</a>
                                     </li>
                                 </ul>
 
@@ -604,11 +612,11 @@ foreach ($int_dest_id_arr as $int_id) {
 
     <!--preloader script-->
     <script>
-    var preloader = document.getElementById('loading');
+        var preloader = document.getElementById('loading');
 
-    function myLoader() {
-        preloader.style.display = 'none';
-    }
+        function myLoader() {
+            preloader.style.display = 'none';
+        }
     </script>
 
     <?php
