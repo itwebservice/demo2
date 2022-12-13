@@ -397,7 +397,7 @@ Component :: Headings
 font-weight: bold;
 display: block;
 color: #333;
-font-size: 30px;
+font-size: 20px;
 line-height: 23px;
 margin: 15px 0 15px;
 }
@@ -1732,7 +1732,7 @@ padding: 10px;
 }
 .cardList-info .dividerSection .divider.s2 {
 text-align: center;
-padding: 10px;
+padding: 30px;
 border-left: 1px solid #f5f5f5;
 }
 .cardList-info .dividerSection .divider.b2cs2 {

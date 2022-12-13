@@ -620,7 +620,7 @@ if (sizeof($group_tour_data) != 0) { ?>
     </h1>
     <div class="logo-slider">
         <?php foreach ($logos as $logo) { ?>
-            <div class="item"><a href="#"><img src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200" alt=""></a>
+            <div class="slideitem"><a href="#"><img src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200" alt=""></a>
             </div>
         <?php } ?>
     </div>
@@ -707,7 +707,7 @@ if (sizeof($b2c_testmtest) != 0) {
                                         <h3 class="ts-testimonial-name"><?= $name ?></h3>
 
                                         <p class="ts-testimonial-description">
-                                            <?= substr($testm[$testm_count]->testm, 0, 400) . '[�K]' ?></p>
+                                            <?= substr($testm[$testm_count]->testm, 0, 400) ?></p>
 
                                         <a target='_blank' href="testimonials.php" class="ts-readmore-link">
 
@@ -864,7 +864,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     <div class="custom_texteditor">
 
-                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[�K]' ?>
+                                        <?= substr($blog[$blog_count]->description, 0, 500) ?>
 
                                     </div>
                                     </p>

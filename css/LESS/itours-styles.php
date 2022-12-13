@@ -1934,7 +1934,7 @@ background: #ff0000;
 width: 100%;
 }
 
-.logo-slider .item{
+.logo-slider .slideitem{
 background-color: #fff;
 box-shadow: 0 4px 5px #cacaca;
 border-radius: 8px;
@@ -1956,7 +1956,7 @@ font-size: 12px;
 color: #ff8159;
 font-size: 24px;
 }
-.item:hover{
+.slideitem:hover{
 display: block;
 transition: all ease 0.3s;
 transform: scale(1.1) translateY(-5px);
