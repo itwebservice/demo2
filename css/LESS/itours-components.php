@@ -2203,7 +2203,7 @@ border: 0;
 
 .c-cardListTable.type-2,
 .c-cardListTable.type-3 {
-cursor: pointer;
+cursor: auto;
 background-color: #f9f9f9;
 box-shadow: none;
 }
