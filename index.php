@@ -635,7 +635,7 @@ if (sizeof($b2c_testmtest) != 0) {
 
                                         <h3 class="ts-testimonial-name"><?= $name ?></h3>
 
-                                        <p class="ts-testimonial-description"><?= substr($testm[$testm_count]->testm, 0, 400) . '[¡K]' ?></p>
+                                        <p class="ts-testimonial-description"><?= substr($testm[$testm_count]->testm, 0, 400) . '[ï¿½K]' ?></p>
 
                                         <a target='_blank' href="testimonials.php" class="ts-readmore-link">
 
@@ -792,7 +792,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     <div class="custom_texteditor">
 
-                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[¡K]' ?>
+                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[ï¿½K]' ?>
 
                                     </div>
                                     </p>
