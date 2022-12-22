@@ -2,8 +2,6 @@
 
 include 'config.php';
 
-
-
 $service = $_GET['service'];
 
 global $app_contact_no;
@@ -17,7 +15,6 @@ $date = date('m-d-Y');
 $date1 = str_replace('-', '/', $date);
 
 ?>
-
 <!-- ********** Component :: Main Slider ********** -->
 
 <div class="c-mainSlider">
@@ -50,7 +47,7 @@ $date1 = str_replace('-', '/', $date);
 
             <div class="item">
 
-                <img src="<?php echo $download_url ?>" alt="<?= $app_name ?>" style="border: none;"/>
+                <img src="<?php echo $download_url ?>" alt="<?= $app_name ?>" style="border: none;" />
 
             </div>
 
@@ -61,15 +58,62 @@ $date1 = str_replace('-', '/', $date);
     <!-- ********** Removed filter from here ********** -->
     <!-- ********** Component :: Info Section ********** -->
 
-
-
 </div>
 
 <!-- ********** Component :: Main Slider End ********** -->
 
+<!--Social Media icon sticky-->
 
+<div class="s-icons">
+    <ul>
+        <?php
 
+        if ($social_media[0]->fb != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->fb ?>">
+                <li class="fb">
+                    <i class="fa fa-facebook"></i>
+                </li>
+            </a>
+        <?php }
+        if ($social_media[0]->tw != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->tw ?>">
+                <li class="twit">
+                    <i class="fa fa-twitter"></i>
+                </li>
+            </a>
+        <?php }
+        if ($social_media[0]->wa != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->wa ?>">
+                <li class="wapp">
+                    <i class="fa fa-whatsapp"></i>
+                </li>
+            </a>
+        <?php }
+        if ($social_media[0]->inst != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->inst ?>">
+                <li class="insta">
+                    <i class="fa fa-instagram"></i>
+                </li>
+            </a>
+        <?php }
+        if ($social_media[0]->li != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->li ?>">
+                <li class="link">
+                    <i class="fa fa-linkedin"></i>
+                </li>
+            </a>
+        <?php }
+        if ($social_media[0]->yu != '') { ?>
+            <a target="_blank" href="<?= $social_media[0]->yu ?>">
+                <li class="yt">
+                    <i class="fa fa-youtube"></i>
+                </li>
+            </a>
+        <?php } ?>
+    </ul>
+</div>
 
+<!--End social Media icon sticky-->
 
 <!-- Who we are Section Start -->
 
@@ -95,9 +139,15 @@ $date1 = str_replace('-', '/', $date);
 
                         <h2 class="ts-section-title" style="text-align:left;">WHO WE ARE</h2>
 
-                        <p class="ts-section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        
-                        <p class="ts-section-description">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p class="ts-section-description">Discovery is a great company to work with & we have been
+                            around for 20 years and more. There are a lot of firsts we have undertaken, bringing smiles
+                            and complete satisfaction in the faces of our clients, travellers and everybody who touches
+                            us.</p>
+
+                        <p class="ts-section-description">Our main focuses are - Individual travellers, Groups of
+                            companies (Meetings, Incentives, and Conferences), social (marriages, anniversaries, and
+                            birthdays) or just about any kind groups travelling and cruising. We take care of people
+                            anywhere and everywhere around the world.</p>
 
                     </div>
 
@@ -131,13 +181,14 @@ $date1 = str_replace('-', '/', $date);
 
     <div class="container">
 
-        <h2 class="ta-section-title">EXPERIENCED THE COLOURFUL WORLD!</h2><br>
-        <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h6>
-        
+        <h2 class="ta-section-title">EXPLORE THE BEAUTY OF NATURE</h2><br>
+        <h6>Find Best deals for Tour Packages, Hotels, Holidays, Bus Reservations for India & International travel, B2b
+            Travel Services.</h6>
+
         <ul>
-        <li style="padding-left: 40%;">
-                    <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">View More</a>
-                  </li>
+            <li style="padding-left: 40%;">
+                <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">VIEW MORE</a>
+            </li>
         </ul>
 
     </div>
@@ -261,7 +312,7 @@ if (sizeof($package_tour_data) != 0) { ?>
                                     <p class="ts-blog-time">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#f68c34" />
+                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#808080" />
                                         </svg>
 
                                         <span><?= $total_nights ?> Nights, <?= $total_days ?> Days</span>
@@ -441,10 +492,11 @@ if (sizeof($group_tour_data) != 0) { ?>
                                     <p class="ts-blog-time">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#f68c34" />
+                                            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" fill="#808080" />
                                         </svg>
 
-                                        <span><?= $tour_groups_array[0]->days - 1 ?> Nights, <?= $tour_groups_array[0]->days ?> Days</span>
+                                        <span><?= $tour_groups_array[0]->days - 1 ?> Nights, <?= $tour_groups_array[0]->days ?>
+                                            Days</span>
 
                                     </p>
 
@@ -503,7 +555,8 @@ if (sizeof($group_tour_data) != 0) { ?>
 
                     <h2 class="ts-section-title">BEST TRAVEL SERVICES</h2>
 
-                    <p class="ts-section-description">Get the best available price for every Packages, Hotel, Flight, Visa or Vehicle booking.<br /> No hidden charges.</p>
+                    <p class="ts-section-description">Get the best available price for every Packages, Hotel, Flight,
+                        Visa or Vehicle booking.<br /> No hidden charges.</p>
 
                     <ul class="ts-available-rate-list">
 
@@ -556,6 +609,24 @@ if (sizeof($group_tour_data) != 0) { ?>
 </section>
 
 <!-- Rate Section End -->
+
+<!-- Partner Slider Start -->
+<div class="container mt-5 mb-5 pt-5 pb-5">
+    <h1 class="text-center mt-5 mb-5">Our Partners
+
+        <?php
+        $logos = json_decode($cached_array[0]->cms_data[0]->assoc_logos);
+        ?>
+    </h1>
+    <div class="logo-slider">
+        <?php foreach ($logos as $logo) { ?>
+            <div class="slideitem"><a href="#"><img src="https://itourscloud.com/destination_gallery/association-logo/<?= $logo ?>.png" width="200" alt=""></a>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+<!-- Partner Slider End -->
+
 
 <?php
 
@@ -635,7 +706,8 @@ if (sizeof($b2c_testmtest) != 0) {
 
                                         <h3 class="ts-testimonial-name"><?= $name ?></h3>
 
-                                        <p class="ts-testimonial-description"><?= substr($testm[$testm_count]->testm, 0, 400) . '[�K]' ?></p>
+                                        <p class="ts-testimonial-description">
+                                            <?= substr($testm[$testm_count]->testm, 0, 400) ?></p>
 
                                         <a target='_blank' href="testimonials.php" class="ts-readmore-link">
 
@@ -643,7 +715,7 @@ if (sizeof($b2c_testmtest) != 0) {
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
                                                 <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                                                <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#f68c34" />
+                                                <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#808080" />
                                             </svg>
 
                                         </a>
@@ -792,7 +864,11 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     <div class="custom_texteditor">
 
+<<<<<<< HEAD
                                         <?= substr($blog[$blog_count]->description, 0, 500) . '[�K]' ?>
+=======
+                                        <?= substr($blog[$blog_count]->description, 0, 500) ?>
+>>>>>>> a5348d1351c531805f4f861cdffda6005c74c099
 
                                     </div>
                                     </p>
@@ -802,7 +878,7 @@ if (sizeof($b2c_blog) != 0) { ?>
                                         <span>Read More</span>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-                                            <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#f68c34" />
+                                            <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" fill="#808080" />
                                         </svg>
 
                                     </a>
@@ -864,7 +940,8 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <spam class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->address ?></spam>
+                        <spam class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->address ?>
+                        </spam>
 
                     </li>
 
@@ -876,7 +953,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <a href="tel: <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
+                        <a <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
 
                     </li>
 
@@ -900,7 +977,8 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </span>
 
-                        <spam class="ts-contact-info-link"><?= $cached_array[0]->cms_data[0]->header_strip_note ?></spam>
+                        <spam class="ts-contact-info-link"><?= $cached_array[0]->cms_data[0]->header_strip_note ?>
+                        </spam>
 
                     </li>
 
@@ -955,6 +1033,60 @@ if (sizeof($b2c_blog) != 0) { ?>
                                 <span class="ts-contact-info-icon">
 
                                     <i class="fa fa-whatsapp"></i>
+
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    <?php }
+
+                    if ($social_media[0]->tw != '') { ?>
+
+                        <li class="ts-social-media-item">
+
+                            <a target="_blank" href="<?= $social_media[0]->tw ?>" class="ts-social-media-link">
+
+                                <span class="ts-contact-info-icon">
+
+                                    <i class="fa fa-twitter"></i>
+
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    <?php }
+
+                    if ($social_media[0]->yu != '') { ?>
+
+                        <li class="ts-social-media-item">
+
+                            <a target="_blank" href="<?= $social_media[0]->yu ?>" class="ts-social-media-link">
+
+                                <span class="ts-contact-info-icon">
+
+                                    <i class="fa fa-youtube"></i>
+
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    <?php }
+
+                    if ($social_media[0]->li != '') { ?>
+
+                        <li class="ts-social-media-item">
+
+                            <a target="_blank" href="<?= $social_media[0]->li ?>" class="ts-social-media-link">
+
+                                <span class="ts-contact-info-icon">
+
+                                    <i class="fa fa-linkedin"></i>
 
                                 </span>
 
@@ -1111,6 +1243,37 @@ include 'layouts/footer.php';
 <script type="text/javascript" src="view/group_tours/js/index.js"></script>
 
 <script type="text/javascript" src="js/scripts.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<!--partner slider script-->
+<script>
+    $('.logo-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        autoplayspeed: 2000,
+        infinite: true,
+        responsive: [{
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+</script>
+<!--End partner slider script-->
 
 <script>
     $(document).ready(function() {

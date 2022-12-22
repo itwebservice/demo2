@@ -340,11 +340,11 @@ $row_tariff = mysqli_fetch_assoc($sq_tariff);
 
                     </li>
 
-                    <li class="nav-item">
+                            <!--    <li class="nav-item">
 
-                        <a class="nav-link" id="pills-covid-tab" data-toggle="pill" href="#pills-covid" role="tab" aria-controls="pills-covid" aria-selected="false">Covid 19</a>
+                                    <a class="nav-link" id="pills-covid-tab" data-toggle="pill" href="#pills-covid" role="tab" aria-controls="pills-covid" aria-selected="false">Covid 19</a>
 
-                    </li>
+                                </li> -->
 
                 </ul>
 

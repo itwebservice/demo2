@@ -120,7 +120,7 @@ global $app_contact_no;
 
                         </span>
 
-                        <a href="#" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->address ?></a>
+                        <a class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->address ?></a>
 
                     </li>
 
@@ -132,7 +132,7 @@ global $app_contact_no;
 
                         </span>
 
-                        <a href="tel: <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
+                        <a <?= $cached_array[0]->company_profile_data[0]->contact_no ?>" class="ts-contact-info-link"><?= $cached_array[0]->company_profile_data[0]->contact_no ?></a>
 
                     </li>
 
@@ -156,7 +156,7 @@ global $app_contact_no;
 
                         </span>
 
-                        <a href="#" class="ts-contact-info-link"><?= $cached_array[0]->cms_data[0]->header_strip_note ?></a>
+                        <a class="ts-contact-info-link"><?= $cached_array[0]->cms_data[0]->header_strip_note ?></a>
 
                     </li>
 
@@ -166,57 +166,111 @@ global $app_contact_no;
 
                     <?php
 
-                    if($social_media[0]->fb != ''){ ?>
+                    if ($social_media[0]->fb != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->fb ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->fb ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-facebook"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
-
-                    <?php }
-
-                    if($social_media[0]->inst != ''){ ?>
-
-                    <li class="ts-social-media-item">
-
-                        <a target="_blank" href="<?= $social_media[0]->inst ?>" class="ts-social-media-link">
-
-                            <span class="ts-contact-info-icon">
-
-                                <i class="fa fa-instagram"></i>
-
-                            </span>
-
-                        </a>
-
-                    </li>
+                        </li>
 
                     <?php }
 
-                    if($social_media[0]->wa != ''){ ?>
+                    if ($social_media[0]->inst != '') { ?>
 
-                    <li class="ts-social-media-item">
+                        <li class="ts-social-media-item">
 
-                        <a target="_blank" href="<?= $social_media[0]->wa ?>" class="ts-social-media-link">
+                            <a target="_blank" href="<?= $social_media[0]->inst ?>" class="ts-social-media-link">
 
-                            <span class="ts-contact-info-icon">
+                                <span class="ts-contact-info-icon">
 
-                                <i class="fa fa-whatsapp"></i>
+                                    <i class="fa fa-instagram"></i>
 
-                            </span>
+                                </span>
 
-                        </a>
+                            </a>
 
-                    </li>
+                        </li>
+
+                    <?php }
+
+                    if ($social_media[0]->wa != '') { ?>
+
+                        <li class="ts-social-media-item">
+
+                            <a target="_blank" href="<?= $social_media[0]->wa ?>" class="ts-social-media-link">
+
+                                <span class="ts-contact-info-icon">
+
+                                    <i class="fa fa-whatsapp"></i>
+
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                        <?php }
+
+                        if ($social_media[0]->tw != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->tw ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-twitter"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li> 
+
+                        <?php }
+
+                        if ($social_media[0]->yu != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->yu ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-youtube"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li>
+                            
+                        <?php }
+
+                        if ($social_media[0]->li != '') { ?>
+
+                            <li class="ts-social-media-item">
+
+                                <a target="_blank" href="<?= $social_media[0]->li ?>" class="ts-social-media-link">
+
+                                    <span class="ts-contact-info-icon">
+
+                                        <i class="fa fa-linkedin"></i>
+
+                                    </span>
+
+                                </a>
+
+                            </li>
 
                     <?php } ?>
 
