@@ -21,7 +21,7 @@ $localIP = getHostByName(getHostName());
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db_name = "itourscloud_demo1";
+$db_name = "v9";
 global $connection;
 $connection = new mysqli($servername, $username, $password, $db_name);
 

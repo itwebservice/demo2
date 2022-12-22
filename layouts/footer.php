@@ -192,7 +192,7 @@
 
                   <div class="col-sm-6 col-md-3 foot-social">
 
-                      <h2 class="c-heading">Follow with us</h2>
+                      <h2 class="c-heading">Join with us</h2>
 
                       <p>Join our social media's and get more update of latest tours, sightseeing & attractions.</p>
 

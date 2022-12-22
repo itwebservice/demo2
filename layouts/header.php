@@ -22,7 +22,7 @@ function get_content($URL)
 
 // LOCAL Cache file readingc
 
-//$cached_array = json_decode(file_get_contents('http://' . $_SERVER['SERVER_NAME'] . '/demo2/crm/view/b2c_cache.php'));
+// $cached_array = json_decode(file_get_contents('http://' . $_SERVER['SERVER_NAME'] . '/demo2/crm/view/b2c_cache.php'));
 
 
 
@@ -331,20 +331,6 @@ foreach ($int_dest_id_arr as $int_id) {
                                             </div>
 
                                         </li>
-
-                                        <!--<li>
-
-                      <div class="c-select2DD st-clear">
-
-                        <select name="state">
-
-                          <option value="English">English</option>
-
-                        </select>
-
-                      </div>
-
-                    </li> -->
 
                                     </ul>
 

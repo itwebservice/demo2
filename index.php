@@ -187,7 +187,7 @@ $date1 = str_replace('-', '/', $date);
 
         <ul>
             <li style="padding-left: 40%;">
-                <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">VIEW MORE</a>
+                <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">READ MORE</a>
             </li>
         </ul>
 
@@ -864,11 +864,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                                     <div class="custom_texteditor">
 
-<<<<<<< HEAD
-                                        <?= substr($blog[$blog_count]->description, 0, 500) . '[�K]' ?>
-=======
                                         <?= substr($blog[$blog_count]->description, 0, 500) ?>
->>>>>>> a5348d1351c531805f4f861cdffda6005c74c099
 
                                     </div>
                                     </p>
