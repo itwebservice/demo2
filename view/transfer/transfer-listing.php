@@ -330,8 +330,8 @@ $passenger = ($pick_drop_array[0]->passengers == 1) ? 'Passenger' : 'Passengers'
         while(($row_query  = mysqli_fetch_assoc($sq_query))){
 
           $vehicle_data = json_decode($row_query['vehicle_data']);
-          if($row_query['image_url'] != ''){
-            $image = $row_query['image_url'];
+          $image = $row_query['image_url'];
+          if($image != ''){
             $newUrl1 = preg_replace('/(\/+)/','/',$image);
             $newUrl1 = explode('uploads', $newUrl1);
             $newUrl = BASE_URL.'uploads'.$newUrl1[1];

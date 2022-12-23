@@ -681,7 +681,6 @@ $(function () {
                 costing_arr : costing_arr,
                 type:type
             }, function(data){
-                console.log(data);
                 $('#btn_quotg').prop('disabled',false);
                //RAZORPay
                 if(data == ''){

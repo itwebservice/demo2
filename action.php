@@ -1444,7 +1444,6 @@ $(function () {
             var phone = $('#phone').val();
 
 
-
             var package_id = $('#package_id').val();
 
             var group_id = $('#group_id').val();

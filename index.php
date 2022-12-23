@@ -187,7 +187,7 @@ $date1 = str_replace('-', '/', $date);
 
         <ul>
             <li style="padding-left: 40%;">
-                <a class="btn header-btn-cta" href="<?= BASE_URL_B2C . 'offers.php' ?>">READ MORE</a>
+                <a class="btn header-btn-cta" target="_blank" href="<?= BASE_URL_B2C . 'offers.php' ?>">READ MORE</a>
             </li>
         </ul>
 
@@ -293,7 +293,7 @@ if (sizeof($package_tour_data) != 0) { ?>
 
                                 <div class="ts-blog-card-img">
 
-                                    <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-img-link">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z" fill="#ffffff" />
@@ -307,7 +307,7 @@ if (sizeof($package_tour_data) != 0) { ?>
 
                                 <div class="ts-blog-card-body">
 
-                                    <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $package_name1 ?></a>
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-title"><?= $package_name1 ?></a>
 
                                     <p class="ts-blog-time">
 
@@ -473,7 +473,7 @@ if (sizeof($group_tour_data) != 0) { ?>
 
                                 <div class="ts-blog-card-img">
 
-                                    <a href="<?= $file_name ?>" class="ts-blog-card-img-link">
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-img-link">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7c-12.23-91.55-87.28-166-178.9-177.6c-136.2-17.24-250.7 97.28-233.4 233.4c11.6 91.64 86.07 166.7 177.6 178.9c53.81 7.191 104.3-6.235 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 .0003C515.9 484.7 515.9 459.3 500.3 443.7zM288 232H231.1V288c0 13.26-10.74 24-23.1 24C194.7 312 184 301.3 184 288V232H127.1C114.7 232 104 221.3 104 208s10.74-24 23.1-24H184V128c0-13.26 10.74-24 23.1-24S231.1 114.7 231.1 128v56h56C301.3 184 312 194.7 312 208S301.3 232 288 232z" fill="#ffffff" />
@@ -487,7 +487,7 @@ if (sizeof($group_tour_data) != 0) { ?>
 
                                 <div class="ts-blog-card-body">
 
-                                    <a href="<?= $file_name ?>" class="ts-blog-card-title"><?= $tour_name1 ?></a>
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-title"><?= $tour_name1 ?></a>
 
                                     <p class="ts-blog-time">
 
@@ -612,7 +612,7 @@ if (sizeof($group_tour_data) != 0) { ?>
 
 <!-- Partner Slider Start -->
 <div class="container mt-5 mb-5 pt-5 pb-5">
-    <h1 class="text-center mt-5 mb-5">Our Partners
+    <h1 class="text-center mt-5 mb-5">OUR PARTNERS
 
         <?php
         $logos = json_decode($cached_array[0]->cms_data[0]->assoc_logos);
@@ -1166,7 +1166,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </div>
 
-                        <button type="submit" id="contact_form_send" class="btn btn-primary">Send Message</button>
+                        <button type="submit" id="contact_form_send" class="btn btn-primary">Sbmit</button>
 
                     </form>
 

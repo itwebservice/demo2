@@ -963,7 +963,7 @@ $infant_count = $tours_array[0]->infant;
 
               array_push($all_costs_array,array('amount' => $total_cost1,'id'=>$currency_id));
 
-              $c_amount1 = $from_currency_rate / $to_currency_rate * $total_cost1;
+              $c_amount1 = ($to_currency_rate!=0) ? $from_currency_rate / $to_currency_rate * $total_cost1 : 0;
 
               array_push($actual_ccosts_array,$c_amount1);
 

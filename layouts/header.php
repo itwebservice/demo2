@@ -168,6 +168,8 @@ foreach ($int_dest_id_arr as $int_id) {
     }
 }
 
+$meta_tags = $cached_array[0]->cms_data[2]->b2c_meta_tags;
+
 // ////////// Header Holiday domestic and internal destinations End //////////////////
 
 ?>

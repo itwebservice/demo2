@@ -15,7 +15,7 @@ $sq_destination= mysqli_fetch_assoc(mysqlQuery("select * from destination_master
 
 $sq_package_program = mysqlQuery("select * from custom_package_program where package_id = '$package_id'");
 
-$sq_terms_cond = mysqli_fetch_assoc(mysqlQuery("select * from terms_and_conditions where type='Package Quotation' and active_flag ='Active'"));
+$sq_terms_cond = mysqli_fetch_assoc(mysqlQuery("select * from terms_and_conditions where type='Package Quotation' and active_flag ='Active' and dest_id='$sq_package[dest_id]'"));
 
 //Include header
 
@@ -60,58 +60,6 @@ $row_tariff = mysqli_fetch_assoc($sq_tariff);
     $c_amount1 = ($to_currency_rate!=0) ? ($from_currency_rate / $to_currency_rate * $total_cost1) : 0;
 
 ?>
-
-<!-- Landing Section Start -->
-<!-- 
-<section class="ts-inner-landing-section ts-best-place-landing-section ts-font-poppins" style="background-image: url(../images/title-background.jpg);">
-
-    <div class="ts-inner-landing-content">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col col-12 col-md-12 col-lg-8 col-xl-9">
-
-                    <h1 class="ts-section-title"><?//= $sq_package['package_name'] ?></h1>
-
-                </div>
-
-                <div class="col col-12 col-md-12 col-lg-4 col-xl-3">
-
-                    <div class="ts-best-place-price-content">
-
-                        <div class="ts-best-place-price-header">
-
-                            <label>Start Price *</label>
-
-                        </div>
-
-                        <div class="ts-best-place-price-body">
-
-                                <span class="p_currency currency-icon"></span>
-
-                                <span class="best-currency-price"><?//= $total_cost1 ?></span>
-
-                                <span class="c-hide best-currency-id"><?//= $h_currency_id ?></span>(PP)
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> -->
-
-<!-- Landing Section End -->
 
 <!-- ********** Component :: Page Title ********** -->
 
@@ -162,27 +110,6 @@ $row_tariff = mysqli_fetch_assoc($sq_tariff);
         </div>
 
         </div>
-
-    <!-- <div class="col-md-5 col-12 c-breadcrumbs">
-
-       <ul>
-
-        <li>
-
-          <a href="<?//= BASE_URL_B2C ?>">Home</a>
-
-        </li>
-
-        <li class="st-active">
-
-          <a href="javascript:void(0)"><?//= $sq_package['title'] ?></a>
-
-        </li>
-
-      </ul> 
-
-    </div>-->
-
 
 
   </div>
@@ -339,12 +266,6 @@ $row_tariff = mysqli_fetch_assoc($sq_tariff);
                         <a class="nav-link" id="pills-terms-tab" data-toggle="pill" href="#pills-terms" role="tab" aria-controls="pills-terms" aria-selected="false">Terms & Conditions</a>
 
                     </li>
-
-                            <!--    <li class="nav-item">
-
-                                    <a class="nav-link" id="pills-covid-tab" data-toggle="pill" href="#pills-covid" role="tab" aria-controls="pills-covid" aria-selected="false">Covid 19</a>
-
-                                </li> -->
 
                 </ul>
 
