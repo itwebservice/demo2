@@ -318,9 +318,9 @@ global $app_contact_no;
 
                                     <option value="">Select</option>
 
-                                    <option value="Group Tour Package">Group Tour Package</option>
+                                    <option value="Group Tour">Group Tour</option>
 
-                                    <option value="Holiday Tour Package">Holiday Tour Package</option>
+                                    <option value="Holiday Tour">Holiday Tour</option>
 
                                     <option value="Hotel Booking">Hotel Booking</option>
 
@@ -348,7 +348,7 @@ global $app_contact_no;
 
                         </div>
 
-                        <button type="submit" id="contact_form_send" class="btn btn-primary">Send Message</button>
+                        <button type="submit" id="contact_form_send" class="btn btn-primary">Submit</button>
 
                     </form>
 
