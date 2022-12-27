@@ -325,7 +325,7 @@ if (sizeof($package_tour_data) != 0) { ?>
 
                                 <div class="ts-blog-card-footer">
 
-                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> VIEW MORE</a>
+                                    <a href="<?= $file_name ?>" target="_blank" class="ts-blog-card-link"> READ MORE</a>
 
                                 </div>
 
@@ -1166,7 +1166,7 @@ if (sizeof($b2c_blog) != 0) { ?>
 
                         </div>
 
-                        <button type="submit" id="contact_form_send" class="btn btn-primary">Sbmit</button>
+                        <button type="submit" id="contact_form_send" class="btn btn-primary">Submit</button>
 
                     </form>
 
