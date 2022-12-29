@@ -1305,9 +1305,6 @@ include 'layouts/footer.php';
             minDate: new Date()
         });
 
-        document.getElementById('return_date').readOnly = true;
-
-
 
         var service = '<?php echo $service; ?>';
 
