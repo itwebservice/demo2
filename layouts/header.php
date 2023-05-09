@@ -7,7 +7,8 @@ include "get_cache_currencies.php";
 include "array_column.php";
 
 // LIVE Cache file reading
-$file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
+// $file_get_c = get_content('https://' . $_SERVER['SERVER_NAME'] . '/crm/view/b2c_cache.php');
+$file_get_c = get_content('https://localhost/tours/v12view/b2c_cache.php');
 $cached_array = json_decode($file_get_c);
 
 function get_content($URL)
@@ -169,6 +170,9 @@ foreach ($int_dest_id_arr as $int_id) {
 }
 
 $meta_tags = $cached_array[0]->cms_data[2]->b2c_meta_tags;
+
+$queryMenu = mysqli_fetch_assoc(mysqlQuery("SELECT menu_option FROM `app_settings` where setting_id='1'"));
+$mainMenu = !empty($queryMenu['menu_option']) ? json_decode($queryMenu['menu_option']) : [];
 
 // ////////// Header Holiday domestic and internal destinations End //////////////////
 
@@ -424,150 +428,195 @@ $meta_tags = $cached_array[0]->cms_data[2]->b2c_meta_tags;
                                 </a>
 
                                 <ul>
+                                    <?php
+                                    if (in_array("home", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                    <li>
+                                            <a href="<?= BASE_URL_B2C ?>">Home</a>
 
-                                        <a href="<?= BASE_URL_B2C ?>">Home</a>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <?php
+                                    if (in_array("group_tours", $mainMenu)) {
+                                    ?>
+                                        <li class="submenu">
 
-                                    </li>
+                                            <a class="show-submenu">Group Tour<i class="icon itours-b2b-angle-down"></i></a>
 
-                                    <li class="submenu">
+                                            <ul>
 
-                                        <a class="show-submenu">Group Tour<i class="icon itours-b2b-angle-down"></i></a>
+                                                <li class="third-level">
 
-                                        <ul>
+                                                    <a>Domestic</a>
 
-                                            <li class="third-level">
+                                                    <ul>
 
-                                                <a>Domestic</a>
+                                                        <?php
 
-                                                <ul>
+                                                        for ($i = 0; $i < sizeof($group_dom_array); $i++) { ?>
 
-                                                    <?php
+                                                            <li><a onclick="get_tours_data('<?= $group_dom_array[$i]->dest_id ?>','2')"><?= $group_dom_array[$i]->dest_name ?></a>
+                                                            </li>
 
-                                                    for ($i = 0; $i < sizeof($group_dom_array); $i++) { ?>
+                                                        <?php } ?>
 
-                                                        <li><a onclick="get_tours_data('<?= $group_dom_array[$i]->dest_id ?>','2')"><?= $group_dom_array[$i]->dest_name ?></a>
-                                                        </li>
+                                                    </ul>
 
-                                                    <?php } ?>
+                                                <li class="third-level">
 
-                                                </ul>
+                                                    <a>International</a>
 
-                                            <li class="third-level">
+                                                    <ul>
 
-                                                <a>International</a>
+                                                        <?php
 
-                                                <ul>
+                                                        for ($i = 0; $i < sizeof($group_intn_array); $i++) { ?>
 
-                                                    <?php
+                                                            <li><a onclick="get_tours_data('<?= $group_intn_array[$i]->dest_id ?>','2')"><?= $group_intn_array[$i]->dest_name ?></a>
+                                                            </li>
 
-                                                    for ($i = 0; $i < sizeof($group_intn_array); $i++) { ?>
+                                                        <?php } ?>
 
-                                                        <li><a onclick="get_tours_data('<?= $group_intn_array[$i]->dest_id ?>','2')"><?= $group_intn_array[$i]->dest_name ?></a>
-                                                        </li>
+                                                    </ul>
 
-                                                    <?php } ?>
+                                                </li>
 
-                                                </ul>
+                                            </ul>
 
-                                            </li>
+                                        </li>
+                                    <?php } ?>
+                                    <?php
+                                    if (in_array("holiday", $mainMenu)) {
+                                    ?>
+                                        <li class="submenu">
 
-                                        </ul>
+                                            <a class="show-submenu">Holiday <i class="icon itours-b2b-angle-down"></i></a>
 
-                                    </li>
+                                            <ul>
 
-                                    <li class="submenu">
+                                                <li class="third-level">
 
-                                        <a class="show-submenu">Holiday <i class="icon itours-b2b-angle-down"></i></a>
+                                                    <a>Domestic</a>
 
-                                        <ul>
+                                                    <ul>
 
-                                            <li class="third-level">
+                                                        <?php
 
-                                                <a>Domestic</a>
+                                                        for ($i = 0; $i < sizeof($dom_array); $i++) { ?>
 
-                                                <ul>
+                                                            <li><a onclick="get_tours_data('<?= $dom_array[$i]->dest_id ?>','1')"><?= $dom_array[$i]->dest_name ?></a>
+                                                            </li>
 
-                                                    <?php
+                                                        <?php } ?>
 
-                                                    for ($i = 0; $i < sizeof($dom_array); $i++) { ?>
+                                                    </ul>
 
-                                                        <li><a onclick="get_tours_data('<?= $dom_array[$i]->dest_id ?>','1')"><?= $dom_array[$i]->dest_name ?></a>
-                                                        </li>
+                                                <li class="third-level">
 
-                                                    <?php } ?>
+                                                    <a>International</a>
 
-                                                </ul>
+                                                    <ul>
 
-                                            <li class="third-level">
+                                                        <?php
 
-                                                <a>International</a>
+                                                        for ($i = 0; $i < sizeof($intn_array); $i++) { ?>
 
-                                                <ul>
+                                                            <li><a onclick="get_tours_data('<?= $intn_array[$i]->dest_id ?>','1')"><?= $intn_array[$i]->dest_name ?></a>
+                                                            </li>
 
-                                                    <?php
+                                                        <?php } ?>
 
-                                                    for ($i = 0; $i < sizeof($intn_array); $i++) { ?>
+                                                    </ul>
 
-                                                        <li><a onclick="get_tours_data('<?= $intn_array[$i]->dest_id ?>','1')"><?= $intn_array[$i]->dest_name ?></a>
-                                                        </li>
+                                                </li>
 
-                                                    <?php } ?>
+                                            </ul>
 
-                                                </ul>
+                                        </li>
+                                    <?php } ?>
 
-                                            </li>
+                                    <?php
+                                    if (in_array("hotels", $mainMenu)) {
+                                    ?>
 
-                                        </ul>
+                                        <li>
 
-                                    </li>
+                                            <a onclick="get_tours_data('','3')">Hotels</a>
 
-                                    <li>
+                                        </li>
+                                    <?php } ?>
 
-                                        <a onclick="get_tours_data('','3')">Hotels</a>
 
-                                    </li>
+                                    <?php
+                                    if (in_array("activities", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                    <li>
+                                            <a onclick="get_tours_data('','4')">Activities</a>
 
-                                        <a onclick="get_tours_data('','4')">Activities</a>
+                                        </li>
+                                    <?php } ?>
 
-                                    </li>
+                                    <?php
+                                    if (in_array("visa", $mainMenu)) {
+                                    ?>
 
-                                    <li>
+                                        <li>
 
-                                        <a onclick="get_tours_data('','6')">Visa</a>
+                                            <a onclick="get_tours_data('','6')">Visa</a>
 
-                                    </li>
+                                        </li>
 
-                                    <li>
+                                    <?php } ?>
 
-                                        <a onclick="get_tours_data('','5')">Transfer</a>
+                                    <?php
+                                    if (in_array("transfer", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                    </li>
+                                            <a onclick="get_tours_data('','5')">Transfer</a>
 
-                                    <li>
+                                        </li>
+                                    <?php } ?>
+                                    <?php
+                                    if (in_array("cruise", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                        <a onclick="get_tours_data('','7')">Cruise</a>
+                                            <a onclick="get_tours_data('','7')">Cruise</a>
 
-                                    </li>
+                                        </li>
+                                    <?php } ?>
+                                    <?php
+                                    if (in_array("services", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                    <li>
+                                            <a href="<?= BASE_URL_B2C . 'services.php' ?>">Services</a>
 
-                                        <a href="<?= BASE_URL_B2C . 'services.php' ?>">Services</a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php
+                                    if (in_array("contact_us", $mainMenu)) {
+                                    ?>
+                                        <li>
 
-                                    </li>
+                                            <a href="<?= BASE_URL_B2C . 'contact.php' ?>">Contact Us</a>
 
-                                    <li>
-
-                                        <a href="<?= BASE_URL_B2C . 'contact.php' ?>">Contact Us</a>
-
-                                    </li>
-                                    <li class="header-btn">
-                                        <a class="btn header-offer-btn" href="<?= BASE_URL_B2C . 'offers.php' ?>">OFFERS</a>
-                                    </li>
+                                        </li>
+                                    <?php } ?>
+                                    <?php
+                                    if (in_array("offers", $mainMenu)) {
+                                    ?>
+                                        <li class="header-btn">
+                                            <a class="btn header-offer-btn" href="<?= BASE_URL_B2C . 'offers.php' ?>">OFFERS</a>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
+
 
                             </div>
 
