@@ -7,7 +7,7 @@ include BASE_URL.'model/model.php';
 include '../../layouts/header.php';
 
 
-
+$_SESSION['page_type'] = 'activities';
 $currency = $_SESSION['session_currency_id'];
 
 $sq_to = mysqli_fetch_assoc(mysqlQuery("select * from roe_master where currency_id='$currency'"));
@@ -592,7 +592,7 @@ if($activities_id!=''){
 
             }else{
 
-                $newUrl = BASE_URL.'images/dummy-image.jpg';
+                $newUrl = BASE_URL_B2C.'images/activity_default.png';
 
             }
 
